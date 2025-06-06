@@ -8,16 +8,14 @@ namespace AgendaActivitati.Model
 {
     internal class Activity
     {
-        public int Id { get; set; }
+        private static int _nextId = 1;
+        public int IdActivity { get; set; }
         public string ActivityName { get; set; }
 
         public Activity(string activityName)
         {
+            IdActivity = _nextId++;
             ActivityName = activityName;
-        }
-
-        public Activity()
-        {
         }
     }
 }
